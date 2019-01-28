@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
 </head>
 <body>
-    <!-- Buttons will Get Dumped Here -->
-    <div id="buttons-view"></div>
+    <div class="container">
+            <h1 class="text-center">Laughter is the best medicine! Give it a try.</h1>
+        <!-- Buttons will Get Dumped Here -->
+        <div id="buttons-view"></div>
+        
+        <form id="animal-form">
+        <label for="animal-input">Add an animal</label>
+        <input type="text" id="animal-input"><br>
+        
+        <!-- Button triggers new animal to be added -->
+        <input id="add-animal" type="submit" value="Add an animal">
 
-    <form id="animal-form">
-      <label for="animal-input">Add an animal</label>
-      <input type="text" id="animal-input"><br>
-
-      <!-- Button triggers new animal to be added -->
-      <input id="add-animal" type="submit" value="Add an animal">
-
-      <div id="gifs-appear-here"></div>
-    </form>
+        <div id="gifs-appear-here"></div>
+        </form>
+    </div>
 <script src="javascript/app.js"></script>
 </body>
 </html>

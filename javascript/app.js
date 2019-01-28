@@ -32,7 +32,9 @@ function displayAnimalInfo(){
                 animalImage.attr("src", results[i].images.fixed_height_still.url);
                 animalImage.attr('data-still', results[i].images.fixed_height_still.url);
                 animalImage.attr('data-animate', results[i].images.fixed_height.url);
+                // stores image's data-state
                 animalImage.attr('data-state', 'still');
+                //adds the gif class to the image src
                 animalImage.addClass('gif');
                 
                 animalDiv.append(p);
@@ -43,6 +45,7 @@ function displayAnimalInfo(){
                 console.log(rating);
 
             }
+            //checks if the variable state is equal to 'still' or 'animate'
             $(".gif").on("click", function(){
                 var state = $(this).attr("data-state");
                 console.log(state); 
@@ -50,10 +53,12 @@ function displayAnimalInfo(){
                 if(state === 'still'){
                   var dataAnimate = $(this).attr("data-animate");
                   $(this).attr("src", dataAnimate);
+                  // updates the data-state attribute to 'animate'
                   $(this).attr('data-state','animate' );
                 } else {
                   var dataStill = $(this).attr("data-still");
                   $(this).attr("src", dataStill);
+                  // updates the data-state attribute to 'still'
                   $(this).attr('data-state','still' );
                 }
             
